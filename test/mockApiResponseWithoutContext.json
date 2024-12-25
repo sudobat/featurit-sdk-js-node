@@ -1,0 +1,69 @@
+{
+  "data": {
+    "SimpleFeat": {
+      "name": "SimpleFeat",
+      "active": true,
+      "distribution_attribute": "userId",
+      "segments": [],
+      "versions": []
+    },
+    "Feat": {
+      "name": "Feat",
+      "active": true,
+      "distribution_attribute": "userId",
+      "segments": [
+        {
+          "rollout_attribute": "ipAddress",
+          "rollout_percentage": 100,
+          "string_rules": [
+            {
+              "attribute": "userId",
+              "operator": "EQUALS",
+              "value": "1"
+            }
+          ],
+          "number_rules": []
+        }
+      ],
+      "versions": [
+        {
+          "name": "v1",
+          "distribution_percentage": 45
+        },
+        {
+          "name": "v2",
+          "distribution_percentage": 55
+        }
+      ]
+    },
+    "Feat2": {
+      "name": "Feat2",
+      "active": false,
+      "distribution_attribute": "userId",
+      "segments": [
+        {
+          "rollout_attribute": "ipAddress",
+          "rollout_percentage": 100,
+          "string_rules": [
+            {
+              "attribute": "userId",
+              "operator": "EQUALS",
+              "value": "1"
+            }
+          ],
+          "number_rules": []
+        }
+      ],
+      "versions": [
+        {
+          "name": "v1",
+          "distribution_percentage": 45
+        },
+        {
+          "name": "v2",
+          "distribution_percentage": 55
+        }
+      ]
+    }
+  }
+}
